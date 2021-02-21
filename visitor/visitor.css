@@ -1,0 +1,10 @@
+/*visitor.css 입니다!*/
+.container {width: 1200px; height: auto; margin: 0 auto;}
+.visitor {overflow: hidden;}
+.visitor li {float:left; width:24.0625%; height:300px; background-color: rgb(197, 193, 170); margin: 0 15px 15px 0;}
+.visitor li:nth-child(4n) {margin: 0 0 15px 0;}
+
+.visitor li:last-child .imgWrap{position: relative; width: 100%; height: 100%; padding: 20px;} 
+.visitor li:last-child .imgWrap img {position: absolute;} 
+.visitor li:last-child .imgWrap img.bal {width: 76%; top:30px; left:50%; transform: translateX(-50%);} 
+.visitor li:last-child .imgWrap img.cy {width: 27%; bottom:30px; left:50%; transform: translateX(-50%);} 
