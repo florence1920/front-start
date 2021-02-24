@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="visitor.css">
+    <link rel="stylesheet" href="common.css">
     <title>Visitor</title>
     <!-- jquery-->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -23,10 +24,20 @@
                 <div class="imgWrap">
                     <img class="bal" src="balloon_c.png" alt="">
                     <img class="cy" src="cycle_c.png" alt="">
+                    <textarea id="visit"></textarea>
+                    <p class="btn_write">글 작성</p>
                 </div>
                 
             </li>
         </ul>
+        <script>
+            $(".btn_write").click(function(){
+                $(this).hide();
+                $(this).prevAll().hide();
+                $('#visit').show();
+                
+            });
+        </script>
     </div>
     
 </body>

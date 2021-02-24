@@ -1,1 +1,8 @@
 /*송파구청 css 입니다*/
+.w1070{width: 1070px; margin:0 auto;}
+
+.header {position:relative; width:100%; height: 425px; background: url(corona_bg.png)no-repeat; } 
+.top {width: 100%; height: 89px; border-bottom: 1px solid #595da1;}
+.top .w1070 {overflow: hidden;}
+.logo {float:left;}
+.sns {float:right;}
