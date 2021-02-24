@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+</head>
+    <style>
+       
+    </style>
+<body>
+    <h1 style="text-align:center">:+: 회원가입 :+: </h1>
+<form mathod="post" name="signup">
+   <table border="1" width= 500; style= "margin: 0 auto;" >
+       <tr>
+           <td align="center"  width=30%>아 이 디</td>
+           <td><input type ="text" name="id"></td> 
+       </tr>
+       <tr>
+           <td align="center">비밀번호</td>
+           <td><input type ="password" name="pw"></td> 
+       </tr>
+        <tr>
+           <td align="center">비밀번호 확인</td>
+           <td><input type ="password" name="pwck"></td> 
+       </tr>   
+        <tr>
+           <td align="center">이 름</td>
+           <td><input type ="text" name="name"></td>         
+       </tr>     
+        <tr>
+           <td align="center">성 별</td>
+           <td><input type="radio"  name="gender" value="F" >여자
+               <input type="radio"  name="gender" value="M">남자 </td> 
+        <tr>
+           <td align="center">생 년  월 일</td>
+           <td><input type="date" name="birth"></td> 
+       </tr>
+       <tr>
+           <td align="center">주 소</td>
+           <td><input type ="text" name="add" size=30></td>         
+       </tr>        
+       <tr>
+           <td align="center">연 락 처</td>
+           <td><input type="text" name="phone1" size=10> * 숫자만 입력 </td> 
+       </tr>
+       <tr>
+           <td align="center">관 심 분 야</td>
+           <td>
+               <input type="checkbox" value="java" name="java"> java
+               <input type="checkbox" value="jsp" name="jsp"> jsp
+               <input type="checkbox" value="html" name="html"> html
+           </td> 
+       </tr>                                      
+ </form>             
+   </table><br/>
+           <div align="center">
+           <button type=submit >가입하기</button>  
+           <button type=reset> 다시작성 </button>
+           </div>
+    
+</body>
+</html>
