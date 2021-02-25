@@ -4,5 +4,14 @@
 .header {position:relative; width:100%; height: 425px; background: url(corona_bg.png)no-repeat; } 
 .top {width: 100%; height: 89px; border-bottom: 1px solid #595da1;}
 .top .w1070 {overflow: hidden;}
-.logo {float:left;}
-.sns {float:right;}
+.logo {float:left; margin: 15.5px 0 0;}
+.logo .logo_img {float:left ; width: 106px; height: 58px; background: url(logo_white.png)no-repeat;}
+.logo .logo_txt {float:left; font-family: gsM; font-size: 24px; color: #fff; margin:33px 0 0 10px; }
+.sns {float:right; margin-top: 34.5px;}
+.sns li {float: left; opacity: .5; margin-left: 15px;}
+.sns li:hover {opacity:1;}
+.sns li:nth-child(1) {width: 11px; height: 20px; background: url(corona_icon.png)no-repeat; background-position: -23px -19px;}
+.sns li:nth-child(2) {width: 13px; height: 17px; background: url(corona_icon.png)no-repeat; background-position: -51px -20px; margin-top: 1.5px;}
+.sns li:nth-child(3) {width: 20px; height: 20px; background: url(corona_icon.png)no-repeat; background-position: -79px -19px;}
+.sns li:nth-child(4) {width: 25px; height: 18px; background: url(corona_icon.png)no-repeat; background-position: -112px -20px; margin-top: 1px;}
+.sns li a {display: block; width: 100%; height: 100%;}
