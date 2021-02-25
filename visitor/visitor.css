@@ -8,3 +8,7 @@
 .visitor li:last-child .imgWrap img {position: absolute;} 
 .visitor li:last-child .imgWrap img.bal {width: 76%; top:30px; left:50%; transform: translateX(-50%);} 
 .visitor li:last-child .imgWrap img.cy {width: 27%; bottom:30px; left:50%; transform: translateX(-50%);} 
+.visitor li:last-child .imgWrap .btn_write {border-width: 1px; background-color: rgba(197, 193, 170, 0.3) ; cursor:pointer; padding:10px 10px; position:absolute; bottom:0; right:0;  font-family: Cafe; font-size: 20px; }
+
+#visit {display: none; width: 100%; height: 100%; color:white; font-size: 18px; font-weight:600px; background: none; border:0;  font-family: Cafe; font-size: 20px;}
+#visit:focus {outline: 0;}

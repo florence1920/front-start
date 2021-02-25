@@ -8,7 +8,7 @@
 .top .w1070 {overflow: hidden;}
 .logo {float: left; margin: 15.5px 0 0;}
 .logo .logo_img {float: left; width: 106px; height: 58px; background: url(logo_white.png)no-repeat;}
-.logo .logo_txt {float: left; font-family: gsM; font-size: 24px; color: #fff; margin: 33px 0 0 10px;}
+.logo .logo_txt {float: left; font-family: gsM; font-size: 24px; color: #fff; margin: 50px 0 0 10px;}
 .sns {float: right; margin-top: 34.5px;}
 .sns li {float: left; opacity: .5; margin-left: 15px;}
 .sns li:hover {opacity: 1;}
