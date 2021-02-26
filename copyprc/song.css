@@ -1,7 +1,7 @@
 /*송파구청 css 입니다*/
 .w1070{width: 1070px; margin:0 auto;}
 
-.header {position:relative; width:100%; height: 425px; background: url(corona_bg.png)no-repeat; } 
+.header {position:relative; width:100%; height: 425px; background: url(corona_bg.png)no-repeat; z-index:2;} 
 .top {width: 100%; height: 89px; border-bottom: 1px solid #595da1;}
 .top .w1070 {overflow: hidden;}
 .logo {float:left; margin: 15.5px 0 0;}
@@ -16,10 +16,31 @@
 .sns li:nth-child(4) {width: 25px; height: 18px; background: url(corona_icon.png)no-repeat; background-position: -112px -20px; margin-top: 1px;}
 .sns li a {display: block; width: 100%; height: 100%;}          
 
-.mid {position:absolute; top: 140px; left: 50%; transform: translateX(-50%);}
-.mid .tit {font-family:gsB; font-size: 32px; color:#fff;}
-.mid .tit span {color:#fff799; margin: 0 0 0 10px;}
-.mid .sub {font-family: gsM; font-size:18px; color: rgba(255, 255, 255, .5); margin: 10px 0 0 2px;}
+.mid {position: absolute;top: 140px;left: 50%;transform: translateX(-50%);}
+.mid .tit {font-family: gsB; font-size: 32px; color:#fff;}
+.mid .tit span {color: #fff799; margin: 0 0 0 10px;}
+.mid .sub {font-family: gsM; font-size: 18px; color: rgba(255, 255, 255, .5); margin: 10px 0 0 2px;}
 
-.container {}
+.container {position:relative; top: -180px; z-index: 3;}
 
+.count {overflow: hidden; background: #fff; border-radius: 25px; padding: 42px 38px;} 
+.count li {float: left; width:15%; text-align:center;}
+.count li:nth-child(2) {width: 40%;}
+.count li:nth-child(4) {width: 30%;}
+.count li .tit {background: #4a506b; font-family:gsM; font-size: 16px; color:#fff; border-radius: 5px;  padding: 10px 0 7px;}
+.count li .tit.tit2 {background: #009fe1;}
+.count li .num {float:left; font-family: gsM; font-size:22px;}
+
+.info {height: 837px; background: #fff; border-radius: 0 0 15px 15px; }
+
+.contact {height: 300px; background: #28348a; border-radius: 15px; padding: 55px 91px 45px; }
+.contact li {overflow:hidden;}
+.contact li .tit {line-height: 42px; font-family: gsB; font-size: 20px; color:#fff;}
+.contact li .txt {line-height: 35px; font-family: gsL; font-size: 15px; color:#fff; list-style:disc; padding:2px 0 0;}
+.contact li:nth-child(1) .txt{float: left; margin-right:25px;}
+.contact li .txt  span {font-family:gsB; font-size:17px; color:#fff799}
+.contact li .left {float:left; width:21%;}
+.contact li:nth-child(1) .left .imo {float:left; width: 38px; height: 38px; background: url(corona_icon.png)no-repeat; background-position: -148px -77px; margin-right:8px;}
+.contact li .right{float:left;}
+
+.bg_gray{width: 100%; height: 3000px; background: #edeff4; z-index: 1;}
