@@ -1,0 +1,15 @@
+.container {
+background: beige; height: 100vh; display:flex; flex-direction: row; 
+justify-content: space-evenly;
+ }
+.item {width: 40px; height: 40px; border: 1px solid black;}
+.item1 {background: #ef9a9a;}
+.item2 {background: #f18dd8;}
+.item3 {background: #7d4a86;}
+.item4 {background: #5c52b4;}
+.item5 {background: #80d5e4;}
+.item6 {background: #7da376;}
+.item7 {background: #a7c2ad;}
+.item8 {background: #ecee7b;}
+.item9 {background: #ad630f;}
+.item10 {background: #fa9b9b;}
