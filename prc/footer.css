@@ -1,0 +1,20 @@
+/*footer*/
+body {background-color: black;}
+.footer {overflow:hidden; width: 100%; background: #fff; padding:56px 70px;}
+.footer > li {float:left; width: 33.33%;}
+.footer > li:nth-child(1) {width: 33.34%; font-size:12px;}
+.footer > li:nth-child(2) {padding-left: 150px;}
+.footer > li:nth-child(4) {width: 100%; font-size: 12px; line-height: 1; font-weight:600;}
+
+.footer .icon {overflow: hidden;}
+.footer .icon li {float:left;  width: 24px; height: 24px;  background: #000; margin-right: 25px;}
+.footer .icon li:nth-child(1) {background: url(resources/images/ic-insta.svg)no-repeat;}
+.footer .icon li:nth-child(2) {background: url(resources/images/ic-youtube.svg)no-repeat;}
+.footer .icon li:nth-child(3) {background: url(resources/images/ic-blog.svg)no-repeat;}
+.footer .info {margin: 35px 0;}
+.footer .info p {line-height: 1.67; font-weight: 500;}
+.footer .sub {font-size:14px; line-height: 1.7; font-weight: 500;}
+.footer .ph {font-size:24px; letter-spacing: 3px; ; font-weight:600; line-height: 1.5;}
+
+.footer .sel_portfolio {float:right; width: 220px; height: 45px; font-size: 14px; font-weight: 500px; border: 0; border-bottom: 1px solid #e8e8e8; }
+.footer .sel_portfolio:focus { outline: 0; border-bottom: 1px solid #e8e8e8;}
