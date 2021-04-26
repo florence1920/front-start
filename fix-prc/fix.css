@@ -1,0 +1,14 @@
+.inner {width:1280px;  position:relative; padding-top:266px; margin:0 auto;}
+.inner h2 {font-size:56px; font-weight:bold; line-height:1.5; letter-spacing:-1.5px;}
+.inner .rankWrap {width:100%; margin-top:80px;}
+.inner .rankWrap .rankNav {width:40%; background-color: blueviolet; position:absolute;}
+.rankNav ul {margin-bottom:100px;}
+.rankNav ul li {font-size:28px; font-weight:bold; margin-bottom:10px;}
+.rankNav h2 {font-size:160px;}
+.inner .rankWrap .rankExp {width:60%; background-color: rgb(21, 122, 10); position:absolute; top:755px; left:40%;}
+.rankExp .rankBox {position:relative;}
+.rankExp .rankBox h2 {font-size:160px; position:relative; z-index:2;}
+.rankExp .rankBox img {padding-bottom:40px; position:relative; top:-115px; z-index:1;}
+.rankExp .rankBox p {font-size:24px; font-weight:bold; position:relative; top:-115px;}
+.rankExp .rankBox ul{font-size:24px; position:relative; top:-115px;}
+.rankExp .rankBox ul .cont {margin-top:10px;}
