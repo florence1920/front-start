@@ -5,7 +5,7 @@
 .rankNav ul {margin-bottom:100px;}
 .rankNav ul li {font-size:28px; font-weight:bold; margin-bottom:10px;}
 .rankNav h2 {font-size:160px;}
-.inner .rankWrap .rankExp {width:60%; background-color: rgb(21, 122, 10); position:absolute; top:755px; left:40%;}
+.inner .rankWrap .rankExp {width:60%; background-color: rgb(110, 110, 110); position:absolute; top:755px; left:40%;}
 .rankExp .rankBox {position:relative;}
 .rankExp .rankBox h2 {font-size:160px; position:relative; z-index:2;}
 .rankExp .rankBox img {padding-bottom:40px; position:relative; top:-115px; z-index:1;}
