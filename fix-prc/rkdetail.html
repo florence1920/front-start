@@ -6,7 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="reset.css" rel="stylesheet">
     <link href="fix.css" rel="stylesheet">
+    <script type="text/javascript" src="jquery.min.js"></script>
     <title>Document</title>
+    <script>
+        var didScroll;
+        //스크롤을 하면 didScroll = true;
+        $(window).scroll(function(event){
+            didScroll = true;
+        });
+        //has
+        setInterval(function(){
+            if(didScroll){
+                hasScrolled();
+                didScroll=false;
+            }
+        },250);
+
+        function hasScrolled(){
+            var st = $(this).scrollTop();
+            console.log(st);
+            
+            if(st >= 300){
+                $(".rankNav").css('position','fixed').css('top','23%')
+            }else {
+                $(".rankNav").css('position','absolute').css('top','0')
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="inner">
@@ -40,11 +66,22 @@
                     </ul>
                 </div>
                 <!--rankBox-->
+                <div class="rankBox">
+                    <h2>TRAVELER</h2>
+                    <img src="starter.jpg">
+                    <p class="tit">환영합니다! 모험을 떠날 준비 되셨나요?</p>
+                    <ul>
+                        <li class="cont">1인 여행 개설 가능</li>
+                        <li class="cont">생성된 여행 참여 가능</li>
+                    </ul>
+                </div>
+                <!--rankBox-->
             </div>
             <!--rankExp-->
         </div>
         <!--rankWrap-->
     </div>
     <!--innerWrap-->
+
 </body>
 </html>
