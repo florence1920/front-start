@@ -1,0 +1,7 @@
+.ggabFoot {overflow:hidden; width:100%; display:inline-block; padding:40px; background-color: brown; vertical-align: middle;}
+.ggabFoot .logo {float:left; width:25%; height:40px;}
+.ggabFoot .tab {float:left; width:75%;}
+.ggabFoot .tab li {float:left; width:33.3%;}
+.ggabFoot .tab li a {color:#ffff; line-height:40px; vertical-align: middle;}
+.ggabFoot .logo a {width:140px; height:40px; display:inline-block; background-image:url('logo.png'); background-position:100% auto; background-size:cover;}
+.mainPic {height:937px; background-image:url('pic_hero_studio.jpg'); background-position:center; background-size:cover;}
