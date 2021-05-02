@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css"/>
+    <link rel="stylesheet" href="rockPS.css"/>
+    <title>Rock paper scissors and stairs</title>
+</head>
+<body>
+    <div class="gameWrap">
+        <div class="score">
+            <div class="playerScore">
+                <h2>Test19202</h2>
+                <p>0</p>
+            </div>
+            <div class="computerScore">
+                <h2>Computer</h2>
+                <p>0</p>
+            </div>
+        </div>
+        <!--score End-->
+        <div class="intro">
+            <h2>가위바위보 계단 올라가기</h2>
+            <p>컴퓨터에게 가위바위보를 이겨 계단을 먼저 올라가면 승리!
+            <br/>*바위로 승리 시 1칸, 가위 2칸, 보 3칸 진행*</p>
+            <button>Let's play</button>
+        </div>
+        <!--intro End-->
+        <div class="match fadeOut">
+            <h2 class="winner">Computer Wins!!</h2>
+            <div class="hands">
+                <img class="playerHand" src="rock.png"/>
+                <img class="computerHand" src="rock.png"/>
+            </div>
+            <div class="options">
+                <button class="sicssors option">scissors<img class="playerHand" src="scissorsIco.png"/></button>
+                <button class="rock option">rock<img class="playerHand" src="rockIco.png"/></button>
+                <button class="paper option">paper<img class="playerHand" src="paperIco.png"/></button>
+                <p>PICK ONE!</p>
+            </div>
+        </div>
+        <!--match End-->
+        <div class="stair">
+            <div class="step">
+                <div class="char c1">
+                    <img class="playerChar" src="playerChar.png"/>
+                    <img class="ComputerChar" src="comChar.png"/>
+                </div>
+                <div class="block b1"></div>
+            </div>
+
+            <div class="step">
+                <div class="char c2">
+                    <img class="playerChar" src="playerChar.png"/>
+                    <img class="ComputerChar" src="comChar.png"/>
+                </div>
+                <div class="block b2"></div>
+            </div>
+
+            <div class="step">
+                <div class="char c3">
+                    <img class="playerChar" src="playerChar.png"/>
+                    <img class="ComputerChar" src="comChar.png"/>
+                </div>
+                <div class="block b3"></div>
+            </div>
+
+            <div class="step">
+                <div class="char c4">
+                    <img class="playerChar" src="playerChar.png"/>
+                    <img class="ComputerChar" src="comChar.png"/>
+                </div>
+                <div class="block b4"></div>
+            </div>
+            <div class="step">
+                <div class="char c5">
+                    <img class="playerChar now" src="playerChar.png"/>
+                    <img class="ComputerChar" src="comChar.png"/>
+                </div>
+                <div class="block b5"></div>
+            </div>
+            <div class="step">
+                <div class="char c6">
+                    <img class="playerChar" src="playerChar.png"/>
+                    <img class="ComputerChar now" src="comChar.png"/>
+                </div>
+                <div class="block b6"></div>
+            </div>
+            <div class="step">
+                <div class="char c7">
+                    <img class="playerChar" src="playerChar.png"/>
+                    <img class="ComputerChar" src="comChar.png"/>
+                </div>
+                <div class="block b7"></div>
+            </div>
+            <div class="step">
+                <div class="char c8">
+                    <img class="playerChar" src="playerChar.png"/>
+                    <img class="ComputerChar" src="comChar.png"/>
+                </div>
+                <div class="block b8"></div>
+            </div>
+        </div>
+    </div>
+    <!--gameWrap End-->
+    <script src="rock.js"></script>
+</body>
+</html>
