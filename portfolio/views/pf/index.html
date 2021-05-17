@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>portfolio</title>
+  	
+  	<!-- FONTS -->
+	<!-- CSS -->	
+	<link href="/portfolio/resources/css/reset.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/common_pf.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/aos.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/contents_pf.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/card.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/rockPS.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/winwheel.css" rel="stylesheet"/>
+	<!-- JS -->
+	<script type="text/javascript" src="/portfolio/resources/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/portfolio/resources/js/Winwheel.js" ></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script type="text/javascript" src="/portfolio/resources/js/aos.js" ></script>	
+
+	
+</head>
+<body>
+	<div id="divView" style="position:absolute; display:none; background-color:#ffffff; border:solid 2px #d0d0d0; width:150px; height:50px; padding: 5px 15px 0;"></div>
+
+		<div id="top">
+			<div id="ham">
+				<span class="bar1"></span>
+				<span class="bar2"></span>
+				<span class="bar3"></span>
+			</div>
+			<div id="clientMenuWrap_pf">
+				<ul class="menu">
+					<li><a href="/portfolio/index.pf">홈</a></li>
+					<li><a href="/portfolio/game/home.pf">게임</a></li>
+					<li><a href="/portfolio/project/tmEx.pf">프로젝트</a></li>
+					<li><a href="/portfolio/profile/team.pf">프로필</a></li>
+					<li><a href="/portfolio/mem/index.pf">트래블메이커</a></li>
+				</ul>
+			</div>
+			<div id="mCover"></div>
+			<a href="/portfolio/index.pf"><p id="logo"></p></a>
+			<!--
+			<div id="sign">
+				<c:if test="${sessionScope.memId == null}">
+					<a href="/portfolio/join.pf"><p class="btnSign">회원가입</p></a>
+					<a href="/portfolio/login.pf"><p class="btnSign">로그인</p></a>
+				</c:if>
+				<c:if test="${sessionScope.memId != null}">
+					<p class="txtSign">환영합니다! <strong>${sessionScope.memId}</strong>님</p>
+					<a href="/portfolio/logout.pf"><p class="btnSign">로그아웃</p></a>
+				</c:if>
+			</div>
+			-->
+		</div>
+		<script>
+			var didScroll;
+			var lastScrollTop = 0;
+			var delta = 5;
+			var navbarHeight = $('#top').outerHeight();
+			
+			$(window).scroll(function(event){
+				didScroll = true;
+			});
+			
+			setInterval(function() {
+				if (didScroll) {
+					hasScrolled();
+					didScroll = false;
+				}
+			}, 250);
+			
+			function hasScrolled() {
+				var st = $(this).scrollTop();
+				if(Math.abs(lastScrollTop - st) <= delta)
+					return;
+				if(st > lastScrollTop && st > navbarHeight){
+					$('#top').removeClass('nav-down').addClass('nav-up');
+				}else {
+					if(st + $(window).height() < $(document).height()) {
+						$('#top').removeClass('nav-up').addClass('nav-down');
+					}
+				}
+				lastScrollTop = st;
+			}
+			
+			$("#ham").click(function(){
+				$(this).toggleClass("active");
+				$('#logo').fadeToggle();
+				$('#sign').fadeToggle();
+				$('#clientMenuWrap_pf').fadeToggle();
+				$('#mCover').fadeToggle();
+			});
+			var nowUrl = window.location.pathname;
+			if(nowUrl == "/portfolio/index.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(0).addClass('on');
+			}else if(nowUrl == "/portfolio/game/home.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');
+			}else if(nowUrl == "/portfolio/game/1to50.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');	
+			}else if(nowUrl == "/portfolio/game/card.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');
+			}else if(nowUrl == "/portfolio/game/lottery.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');	
+			}else if(nowUrl == "/portfolio/game/numUpDown.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');	
+			}else if(nowUrl == "/portfolio/game/purchase.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');
+			}else if(nowUrl == "/portfolio/game/randomPick.pf"){ 	
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');		
+			}else if(nowUrl == "/portfolio/game/rockPS.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');
+			}else if(nowUrl == "/portfolio/project/tmEx.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(2).addClass('on');
+			}else if(nowUrl == "/portfolio/profile/team.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(3).addClass('on');
+			}else if(nowUrl == "/portfolio/profile/lsm.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(3).addClass('on');
+			}else if(nowUrl == "/portfolio/profile/jbr.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(3).addClass('on');
+			}else if(nowUrl == "/portfolio/profile/lsh.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(3).addClass('on');
+			}else if(nowUrl == "/portfolio/profile/hys.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(3).addClass('on');
+			}else if(nowUrl == "/portfolio/mem/index.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(4).addClass('on');
+			}
+		</script>
+	
+		<div id="transcroller-body" class="wrapAll client">      
+			<div class="portfolioMode indexMode">
+				<div class="portNav">
+					<ul>
+						<li>
+							<p>
+								<a href="#">메인</a>
+							</p>
+						</li>
+						<li>
+							<p>
+								<a href="#">팀 소개</a>
+							</p>
+						</li>
+						<li>
+							<p>
+								<a href="#">개인 소개</a>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<!--portNav End-->
+				<div class="portRight"></div>
+				<!--portNav End-->
+				
+				<div class="mainConts">
+					<div class="txtWrap">
+						<p class="txt3" data-aos="fade-left" data-aos-duration="900">
+							우리는 창의적이고 <br/>
+							실용적인 제품을 만들기 위해<br/>
+							노력하고 있습니다
+						</p>
+					</div>		
+
+					<div class="txtWrap txtWrap2">
+						<p class="txt1" data-aos="fade-up" data-aos-duration="900">기능과<br/>디자인을 겸비한<br/>새로운 워크웨어</p>
+						<p class="txt2" data-aos="fade-up" data-aos-duration="900">
+							제조/건설/석유/화학 영역의 워크웨어는<br/>
+							코오롱이 보유한 국내 최고의 테크놀러지를 사용합니다.<br/>
+							다양한 작업환경과 기후에 맞는 소재, 착용자의<br/>
+							편안함과 안전성을 위한 패턴을 제공합니다.
+						</p>
+						<p class="txt2" data-aos="fade-up" data-aos-duration="900">
+							글로벌한 소재 소싱, 안정된 생산시스템을<br/>
+							통해 고객사를 만족시키고, 기업의 가치와 작업능률을<br/>
+							높여줄 최고의 워크웨어를 제안합니다.
+						</p>
+					</div>
+
+					<div class="txtWrap txtWrap2">
+						<p class="txt1" data-aos="fade-up" data-aos-duration="900">기능과<br/>디자인을 겸비한<br/>새로운 워크웨어</p>
+						<p class="txt2" data-aos="fade-up" data-aos-duration="900">
+							제조/건설/석유/화학 영역의 워크웨어는<br/>
+							코오롱이 보유한 국내 최고의 테크놀러지를 사용합니다.<br/>
+							다양한 작업환경과 기후에 맞는 소재, 착용자의<br/>
+							편안함과 안전성을 위한 패턴을 제공합니다.
+						</p>
+						<p class="txt2" data-aos="fade-up" data-aos-duration="900">
+							글로벌한 소재 소싱, 안정된 생산시스템을<br/>
+							통해 고객사를 만족시키고, 기업의 가치와 작업능률을<br/>
+							높여줄 최고의 워크웨어를 제안합니다.
+						</p>
+					</div>
+
+				</div>
+				
+			</div>
+			<!-- //portfolioMode end -->
+			
+			<div class="gameMode indexMode">
+				
+				<h1>게임 모드</h1>
+				<button class="modeBtn">모드변경</button>
+				
+			</div>
+			<!-- //gameMode end -->
+			
+			<script>
+				$('.modeBtn').click(function(){
+					$('.indexMode').fadeToggle(200);
+					$('#top').toggleClass('black');
+				});
+			</script>
+			
+		</div>
+		<!-- //wrapAll end -->
+		<ul class="footer">
+		<li>
+		   <ul class="icon">
+			  <li></li>
+			  <li></li>
+			  <li></li>
+		   </ul>
+		   <div class="info">
+		   	  <p class="sub">Member</p>
+			  <p>이승민 조윤호 정보름 이승헌 허윤서</p>
+			  <p>서울시 관악구 남부순환로 1820,에그엘로우14층</p>
+		   </div>
+		</li>
+		<li class="middle">
+		   <p class="sub">Service Center</p>
+		   <p class="ph">1577-1577</p>
+		</li>
+		<li>
+		   <select class="sel_portfolio">
+			  <!-- <option defaultValue="Family Site">Family Site</option>
+			  <option value="포폴1">GITHUB</option>
+			  <option value="포폴2">Americano</option> -->
+		   </select>
+		</li>
+		<li>
+		   <p>ⓒ 2021 Travel Maker Co., Ltd. All Rights Reserved.</p>
+		</li>
+	</ul>
+	<!-- //footer end -->
+	
+	<div id="divView" style="position:absolute; display:none; background-color:#ffffff; border:solid 2px #d0d0d0; width:150px; height:50px; padding: 5px 15px 0;"></div>
+	<script>
+	$('.clickMenu').click(function(e) {
+		var divTop = e.pageY - 40; //상단 좌표 위치 안맞을시 e.pageY
+		var divLeft = e.pageX; //좌측 좌표 위치 안맞을시 e.pageX
+		var serial = $(this).attr("serial");
+		var idx = $(this).attr("idx");
+		var userId = $('.clickId').val();
+		console.log(userId);
+		$('#divView').empty().append('<div style="position:absolute;top:5px;right:5px"><span id="close" style="cursor:pointer;font-size:1.5em" title="닫기">x</span> </div><a href="/travelMaker/mem/userHistory.tm?userId='+userId+'">이력보기</a><br/><a href="/travelMaker/msg/messageWrite.tm?receiver='+userId+'">쪽지 보내기</a>');
+		$('#divView').css({
+			"top": divTop,
+			"left": divLeft,
+			"position": "absolute",
+			"z-index" : "996"
+		}).show();
+		$('#close').click(function(){document.getElementById('divView').style.display='none'});
+	});
+	
+	AOS.init({
+	  easing: 'ease-in-out-sine'
+	});
+	</script>
+
+</body>
+</html>
