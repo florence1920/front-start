@@ -4,6 +4,15 @@
 
 /*index basic*/
 .indexMode {}
+.w1200 {width:1200px; margin:0 auto;}
+.wrapAll {padding:0;}
+.wrapAll.wrapAll2 {padding:0 0 0 310px;}
+.wrapAll .titWrap .txt3 {font-size:40px; font-weight:500; line-height:1.2; margin: 80px 0 80px 0;}
+.wrapAll .titWrap.mb {margin:0 0 400px 0;}
+.wrapAll .titWrap .tit {font-size:90px; color:#ff3f02; font-weight:bold;}
+.wrapAll .titWrap .sub {font-size:50px; line-height:60px; margin:20px 0 40px 0;}
+.wrapAll .titWrap .txt {font-size:20px; line-height:35px;}
+.wrapAll .titWrap .sTit {font-size:25px; font-weight:bold; line-height:35px;}
 
 /*index portfolio*/
 .portfolioMode {background: #fff;}
@@ -11,14 +20,79 @@
 .portRight {width:40%; height:100vh; position:fixed; right:0; top:0;}
 .pic {transition: .6s;}
 .pic1 img {height:100%; position:absolute; left:0; top:0;}
-.mainConts {padding:0 0 0 300px; } 
-.mainConts .txtWrap .txt1 {font-size:85px; font-weight:600; line-height:1.2; margin:0 0 80px 0;}
-.mainConts .txtWrap .txt2 {font-size:20px; font-weight:400; line-height:1.2; margin:0 0 40px 0;}
-.mainConts .txtWrap .txt3 {font-size:40px; font-weight:500; line-height:1.2; margin: 80px 0 80px 0;}
-.mainConts .txtWrap2 {margin:0 0 400px 0;}
 .picOut {opacity:0;}
 .picIn {opacity:1;}
 .portNav a {color:rgb(124, 124, 124); font-size:30px;}
 .on a {color:#000;}
+
+/*main profile*/
+.meetWrap {padding:150px 0;}
+.meetCont {overflow: hidden;}
+.meetCont li {padding: 0 0 0 30px; position:relative;}
+.meetCont li .caption {transform: rotate(270deg); transform-origin: 0% 0%; position:absolute; top:580px; left:0;}
+.meetCont li .caption span {color:#ff3f02;}
+.meetCont li .value .sub {margin:23px 0 15px 0; font-size:40px; font-weight: 600;}
+.meetCont li .value .exp {font-size:20px; line-height:1.3; font-weight:400;}
+.meetCont .imgWrap {width:535px; height:620px; position:relative;}
+.meetCont .imgWrap .bg {width:100%; height:100%; transition: .3s; opacity:0; padding: 80px; position: absolute;top: 0;right: 0; z-index:2;}
+.meetCont .imgWrap .bg p {display: none;}
+.meetCont .imgWrap .bg a {display: block; width:100%; height:100%; position: absolute;top: 0;right: 0; z-index:1;}
+.meetCont .imgWrap .bg .name {line-height: ; color: #fff; font-family: 'Noto Sans KR', sans-serif; font-size: 80px; font-weight: 500;}
+.meetCont .imgWrap .bg .card {position: absolute;bottom: 80px;right: 80px;}
+.meetCont .imgWrap .bg .card .email {text-align: right; color: #fff; font-family: 'Noto Sans KR', sans-serif; font-size: 32px; font-weight: 100; margin: 0 0 10px 0;}
+.meetCont .imgWrap .bg .card .ph {text-align: right; color: #fff; font-family: 'Noto Sans KR', sans-serif; font-size: 32px; font-weight: 200;}
+.meetCont .imgWrap img {width:100%; height:100%; position: absolute;top: 0;right: 0; z-index:1;}
+.meetCont .imgWrap:hover .bg {background: #ff3f02; opacity:1;}
+.meetCont .imgWrap:hover .bg p {display: block;}
+
+.meetCont .meetContRight li:nth-child(1) .imgWrap {width: 535px; height:400px;}
+.meetCont .meetContLeft {float:left; width:46%; margin:150px 8% 0 0;}
+.meetCont .meetContLeft li {margin-bottom:100px;}
+.meetCont .meetContRight {float:left; width:46%;}
+.meetCont .meetContRight li {margin-bottom:100px;}
+
+.contactWrap {width: 100%; background: #f3f3f3; padding: 180px 0;}
+.contactWrap .nameCard {overflow: hidden;}
+.contactWrap .nameCard li {float: left; width: 23.25%; background: #000; padding: 50px 40px; margin: 0 2% 0 0;}
+.contactWrap .nameCard li:nth-child(4) {margin: 0;}
+.contactWrap .nameCard li .name {line-height: 0.8; color: #fff; font-family: 'Noto Sans KR', sans-serif; font-size: 45px; font-weight: 100; margin: 0 0 100px 0;}
+.contactWrap .nameCard li .email {text-align: right; color: #fff; font-family: 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 100;}
+.contactWrap .nameCard li .ph {text-align: right; color: #fff; font-family: 'Noto Sans KR', sans-serif; font-size: 27px; font-weight: 200;}
+
+/*team profile*/
+.teamIntro { margin:100px 0 100px 0; position:relative;}
+.teamIntro .teamMain {display:block; width:1080px; height:620px;}
+.teamIntro .logoWrap {position:absolute; bottom:50px; left:1140px;}
+.teamDetail {padding:0 0 200px 475px;}
+.imgBundle {overflow: hidden; margin:0 0 20px 0;}
+.imgBundle li {float:left;}
+.imgBundle li img {width: 480px;}
+.logoFonts {overflow: hidden; padding:60px 0 80px;}
+.logoFonts .graphPaper {background-image: url(/portfolio/resources/images/pf/graphPaper.png);}
+.logoFonts .graphPaper {width:500px; height:500px; margin:25px 50px 0 0; padding:65px 100px 0; position: relative;}
+.logoFonts .graphFonts {width:650px; margin:25px 0 0 0;}
+.logoFonts .graphPaper > img {display:block; position: absolute; top:50%; left:50%; transform:translate(-50%,-50%);}
+.logoFonts .logo {float: left;}
+.logoFonts .fonts {float: left;}
+.wrapAll .fonts.titWrap .sub {margin:0; font-weight:bold;}
+.wrapAll .fonts.titWrap .txt.notoS {margin:50px 0 0; font-family: 'Noto Sans KR', sans-serif;}
+
+.colors .cBox {overflow: hidden; margin: 25px 0 100px;}
+.colors .cBox li {float: left; margin: 0 2% 0 0;}
+.colors .cBox li .top {height:30px; margin:0 0 20px;}
+.colors .cBox li .bottom {height:350px; margin:20px 0 0;}
+.colors .cBox li:nth-child(1) {width: 25%; margin: 0 5% 0 0;}
+.colors .cBox li:nth-child(1) .color {background: #ff3f02;}
+.colors .cBox li:nth-child(2) {width: 16%; }
+.colors .cBox li:nth-child(2) .color {background: #000;}
+.colors .cBox li:nth-child(3) {width: 16%;}
+.colors .cBox li:nth-child(3) .color { background: #5f5f5f;}
+.colors .cBox li:nth-child(4) {width: 16%;}
+.colors .cBox li:nth-child(4) .color { background: #cacaca;}
+.colors .cBox li:nth-child(5) {width: 16%; margin:0; }
+.colors .cBox li:nth-child(5) .color {background: #fff; border: 1px solid #000;}
+.colors .hex {margin: 20px 0 0;}
+
+/*25 16 16 16 16 //89 mar 3 2.5*/
 /*index game*/
 .gameMode {display: none; background: #333;}
