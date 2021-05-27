@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- FONTS -->
+   <link rel="preconnect" href="https://fonts.gstatic.com"/>
+   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"/>
+   <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet"/>
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet"/>
+
+   <!-- CSS -->	
+	<link href="/portfolio/resources/css/reset.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/common_pf.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/aos.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/contents_pf.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/card.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/rockPS.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/winwheel.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/fullpage.css" rel="stylesheet"/>
+	<!-- JS -->
+	<script type="text/javascript" src="/portfolio/resources/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/portfolio/resources/js/Winwheel.js" ></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script type="text/javascript" src="/portfolio/resources/js/aos.js" ></script>	
+	<script type="text/javascript" src="/portfolio/resources/js/fullpage.min.js" ></script>	
+
+</head>
+<body>
+    
+    <div id="top">
+        <div id="ham">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+        </div>
+        <jsp:include page="/WEB-INF/views/include/clientMenu_pf.jsp" />
+        <div id="mCover"></div>
+        <a href="/portfolio/index.pf"><p id="logo">logo</p></a>
+        <div id="sign">
+            
+        </div>
+    </div>
+    <script>
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('#top').outerHeight();
+        
+        $(window).scroll(function(event){
+            didScroll = true;
+        });
+        
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+        
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+            if(Math.abs(lastScrollTop - st) <= delta)
+                return;
+            if(st > lastScrollTop && st > navbarHeight){
+                $('#top').removeClass('nav-down').addClass('nav-up');
+            }else {
+                if(st + $(window).height() < $(document).height()) {
+                    $('#top').removeClass('nav-up').addClass('nav-down');
+                }
+            }
+            
+            lastScrollTop = st;
+        }
+        
+        $("#ham").click(function(){
+            $(this).toggleClass("active");
+            $('#logo').fadeToggle();
+            $('#sign').fadeToggle();
+            $('#clientMenuWrap_pf').fadeToggle();
+            $('#mCover').fadeToggle();
+        });
+        var nowUrl = window.location.pathname;
+        if(nowUrl == "/portfolio/index.pf"){
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(0).addClass('on');
+        }else if(nowUrl == "/portfolio/game/home.pf"){
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');
+        }else if(nowUrl == "/portfolio/game/1to50.pf"){
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');   
+        }else if(nowUrl == "/portfolio/game/card.pf"){
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');
+        }else if(nowUrl == "/portfolio/game/lottery.pf"){
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');   
+        }else if(nowUrl == "/portfolio/game/numUpDown.pf"){
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');   
+        }else if(nowUrl == "/portfolio/game/purchase.pf"){
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');
+        }else if(nowUrl == "/portfolio/game/randomPick.pf"){    
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');      
+        }else if(nowUrl == "/portfolio/game/rockPS.pf"){
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');
+        }else if(nowUrl == "/portfolio/project/tmEx.pf"){
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(2).addClass('on');
+        }else if(nowUrl == "/portfolio/profile/team.pf"){
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(3).addClass('on');
+        }else if(nowUrl == "/portfolio/profile/lsm.pf"){
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(3).addClass('on');
+        }else if(nowUrl == "/portfolio/profile/jbr.pf"){
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(3).addClass('on');
+        }else if(nowUrl == "/portfolio/profile/lsh.pf"){
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(3).addClass('on');
+        }else if(nowUrl == "/portfolio/profile/hys.pf"){
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(3).addClass('on');
+        }else if(nowUrl == "/portfolio/mem/index.pf"){
+            $('#clientMenuWrap_pf').children('.menu').children('li').eq(4).addClass('on');
+        }        
+    </script>
+
+     <div style="display:none;position:fixed;top:50px;left:50px;z-index:999;" id="callbacksDiv"></div>
+    <!--callbacksDiv end-->
+    
+    <div class="btnGoTop"></div>
+
+    <div class="popWrap" id="popWrap">
+        <div class="btnDef btnPopClose bounce-to-right">Close</div>
+        <div class="btnDef bounce-to-right btnPopGo">Go</div>
+        <ul class="inner" id="popWrapTop">
+            <li>
+               <h1>게임 페이지입니다</h1>
+            </li>
+            <li>
+                <h1>TravelMaker</h1>
+            </li>
+        </ul>
+    </div>
+    <!-- //popWrap end -->
+
+    <div class="imgWrap">
+        <img class="img img1" src="/resources/images/bread.png"/>
+        <img class="img img2-1" src="/resources/images/bus.png"/>
+        <img class="img img2-2" src="/resources/images/beer.png"/>
+        <img class="img img3" src="/resources/images/soju.png"/>
+    </div>
+    <!--imgWrap End-->
+
+    <div id="fullpage">
+        <div class="section active" id="section0">
+            <div class="titWrap titWrap1">
+                <p class="tit">1We are FILO.</p>
+                <p class="sub">
+                   저희가 궁금하신가요? <br/>
+                   프로필을 확인해보세요 :)
+                </p>
+                <p class="txt">
+                   글로벌한 소재 소싱, 안정된 생산시스템을<br/>
+                   통해 고객사를 만족시키고, 기업의 가치와 작업능률을<br/>
+                   높여줄 최고의 워크웨어를 제안합니다.
+                </p>
+             </div>             
+        </div>
+        <div class="section" id="section1">
+            <div class="slide" id="slide1">
+                <div class="titWrap titWrap2-1">
+                    <p class="tit">2-1We are FILO.</p>
+                    <p class="sub">
+                       저희가 궁금하신가요? <br/>
+                       프로필을 확인해보세요 :)
+                    </p>
+                    <p class="txt">
+                       글로벌한 소재 소싱, 안정된 생산시스템을<br/>
+                       통해 고객사를 만족시키고, 기업의 가치와 작업능률을<br/>
+                       높여줄 최고의 워크웨어를 제안합니다.
+                    </p>
+                    <div class="btnDef bounce-to-right btnPop btnPop1">Detail</div>
+                    <div class="btnDef bounce-to-right btnPop">Go</div>
+                 </div>
+                 <!--titWrap End-->
+            </div>
+            <div class="slide" id="slide2">               
+                <div class="titWrap titWrap2-2">
+                    <p class="tit">2-2We are FILO.</p>
+                    <p class="sub">
+                       저희가 궁금하신가요? <br/>
+                       프로필을 확인해보세요 :)
+                    </p>
+                    <p class="txt">
+                       글로벌한 소재 소싱, 안정된 생산시스템을<br/>
+                       통해 고객사를 만족시키고, 기업의 가치와 작업능률을<br/>
+                       높여줄 최고의 워크웨어를 제안합니다.
+                    </p>
+                    <div class="btnDef bounce-to-right btnPop btnPop2">Detail</div>
+                    <div class="btnDef bounce-to-right btnPop">Go</div>
+                 </div>
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <div class="titWrap titWrap3">
+                <p class="tit">3We are FILO.</p>
+                <p class="sub">
+                   저희가 궁금하신가요? <br/>
+                   프로필을 확인해보세요 :)
+                </p>
+                <p class="txt">
+                   글로벌한 소재 소싱, 안정된 생산시스템을<br/>
+                   통해 고객사를 만족시키고, 기업의 가치와 작업능률을<br/>
+                   높여줄 최고의 워크웨어를 제안합니다.
+                </p>
+             </div>
+        </div>
+        <div class="section fp-auto-height" id="section3">
+            <ul class="footer">
+                <li>
+                   <ul class="icon">
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                   </ul>
+                   <div class="info">
+                        <p class="sub">Meindexer</p>
+                     <p>이승민 조윤호 정보름 이승헌 허윤서</p>
+                     <p>서울시 관악구 남부순환로 1820,에그엘로우14층</p>
+                   </div>
+                </li>
+                <li class="middle">
+                   <p class="sub">Service Center</p>
+                   <p class="ph">1577-1577</p>
+                </li>
+                <li>
+                   <select class="sel_portfolio">
+                     <!-- <option defaultValue="Family Site">Family Site</option>
+                     <option value="포폴1">GITHUB</option>
+                     <option value="포폴2">Americano</option> -->
+                   </select>
+                </li>
+                <li>
+                   <p>ⓒ 2021 Travel Maker Co., Ltd. All Rights Reserved.</p>
+                </li>
+             </ul>
+        </div>
+    </div>
+     <!--fullpage End-->
+    <script type="text/javascript">
+        var deleteLog = false;
+
+        //adding the params info into the page
+        function addToLog(callbackName, params){
+            var callbackData = '<h4>' + callbackName + '</h4>';
+            Object.keys(params).forEach(function(key){
+                var content =  params[key];
+
+                if(content !== null && typeof content === 'object'){
+                    content = JSON.stringify(content);
+                }
+                callbackData += '<p><b>' + key + '</b>: ' + content + '</p>';
+            });
+            callbackData += '<br />';
+
+            document.getElementById('callbacksDiv').innerHTML += callbackData;
+        }
+
+        var nowSlide = 0;
+
+        var myFullpage = new fullpage('#fullpage', {
+            anchors: ['1stPage', '2ndPage', '3rdPage','4thPage'],
+            onLeave: function(origin, destination, direction){
+                var params = {
+                    origin: origin,
+                    destination:destination,
+                    direction: direction
+                };
+
+                //clearing the logging in the screen
+                if(deleteLog){
+                    document.getElementById('callbacksDiv').innerHTML = '';
+                }
+
+                addToLog('onLeave', params);
+
+                console.log("--- onLeave ---");
+                console.log(params);
+
+                if(!params.destination.isLast && !params.origin.isLast){                    
+                    $('.img').fadeOut();
+                    $('.titWrap > .tit').css({opacity:'0', top:'-80px'});
+                    $('.titWrap > .sub').css({opacity:'0', left:'-80px'});
+                    $('.titWrap > .txt').css({opacity:'0', left:'-80px'});
+                }
+
+                if(params.destination.isLast){
+                    $('.imgWrap').animate({bottom:"300px"},400);
+                }else{
+                    $('.imgWrap').animate({bottom:"0"},400);
+                }
+            },
+            onSlideLeave: function(section, origin, destination, direction){
+                var params = {
+                    section: section,
+                    origin: origin,
+                    destination: destination,
+                    direction: direction
+                };
+
+                //clearing the logging in the screen
+                if(deleteLog){
+                    document.getElementById('callbacksDiv').innerHTML = '';
+                }
+
+                addToLog('onSlideLeave', params);
+
+                console.log("--- onSlideLeave ---");
+                console.log(params);
+                
+                nowSlide = params.destination.index;
+                $('.img').fadeOut();
+                $('.titWrap > .tit').css({opacity:'0', top:'-80px'});
+                $('.titWrap > .sub').css({opacity:'0', left:'-80px'});
+                $('.titWrap > .txt').css({opacity:'0', left:'-80px'});
+            },
+            afterLoad: function(origin, destination, direction){
+                var params = {
+                    origin: origin,
+                    destination: destination,
+                    direction: direction
+                };
+
+                //clearing the logging in the screen
+                if(deleteLog){
+                document.getElementById('callbacksDiv').innerHTML = '';
+                }
+                addToLog('afterLoad', params);
+
+                console.log("--- afterLoad ---");
+                console.log(params);
+
+                var nowPage = params.destination.anchor;
+                console.log("nowPage : " + nowPage);
+                
+                if(nowPage == "1stPage"){
+                    $('.imgWrap').css('background','#123456');
+                    $('.img1').fadeIn();
+                    $('.titWrap1 > .tit').animate({top:"0",opacity:"1"}, 700);
+                    $('.titWrap1 > .sub').delay(400).animate({left:"0",opacity:"1"}, 700);
+                    $('.titWrap1 > .txt').delay(700).animate({left:"0",opacity:"1"}, 700);
+                }else if(nowPage == "2ndPage" && nowSlide == "0"){
+                    $('.imgWrap').css('background','#321456');
+                    $('.img2-1').fadeIn();
+                    $('.titWrap2-1 > .tit').animate({top:"0",opacity:"1"}, 700);
+                    $('.titWrap2-1 > .sub').delay(400).animate({left:"0",opacity:"1"}, 700);
+                    $('.titWrap2-1 > .txt').delay(700).animate({left:"0",opacity:"1"}, 700);
+                }else if(nowPage == "2ndPage" && nowSlide == "1"){
+                    $('.imgWrap').css('background','#cacaca');
+                    $('.img2-2').fadeIn();
+                    $('.titWrap2-2 > .tit').animate({top:"0",opacity:"1"}, 700);
+                    $('.titWrap2-2 > .sub').delay(400).animate({left:"0",opacity:"1"}, 700);
+                    $('.titWrap2-2 > .txt').delay(700).animate({left:"0",opacity:"1"}, 700);
+                }else if(nowPage == "3rdPage"){
+                    $('.imgWrap').css('background','#654456');
+                    $('.img3').fadeIn();
+                    $('.titWrap3 > .tit').animate({top:"0",opacity:"1"}, 700);
+                    $('.titWrap3 > .sub').delay(400).animate({left:"0",opacity:"1"}, 700);
+                    $('.titWrap3 > .txt').delay(700).animate({left:"0",opacity:"1"}, 700);
+                }
+
+                deleteLog = true;
+            },
+            afterSlideLoad: function(section, origin, destination, direction){
+                var params = {
+                    section: section,
+                    origin: origin,
+                    destination: destination,
+                    direction: direction
+                };
+
+                //clearing the logging in the screen
+                if(deleteLog){
+                document.getElementById('callbacksDiv').innerHTML = '';
+                }
+                addToLog('afterSlideLoad', params);
+
+                console.log("--- afterSlideLoad ---");
+                console.log(params);
+                
+                nowSlide = params.destination.index;
+                console.log("nowSlide : " + nowSlide);
+                
+                if(nowSlide == "0"){
+                    $('.imgWrap').css('background','#321456');
+                    $('.img2-1').fadeIn();
+                    $('.titWrap2-1 > .tit').animate({top:"0",opacity:"1"}, 700);
+                    $('.titWrap2-1 > .sub').delay(400).animate({left:"0",opacity:"1"}, 700);
+                    $('.titWrap2-1 > .txt').delay(700).animate({left:"0",opacity:"1"}, 700);
+                }else if(nowSlide == "1"){
+                    $('.imgWrap').css('background','#cacaca');
+                    $('.img2-2').fadeIn();
+                    $('.titWrap2-2 > .tit').animate({top:"0",opacity:"1"}, 700);
+                    $('.titWrap2-2 > .sub').delay(400).animate({left:"0",opacity:"1"}, 700);
+                    $('.titWrap2-2 > .txt').delay(700).animate({left:"0",opacity:"1"}, 700);
+                }
+
+                deleteLog = true;
+            }
+        });
+
+        //layer pop-up
+        $('.btnPop1').click(function(){
+            $('body').on('scroll mousewheel', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                return false;
+            });
+            $('#mCover').fadeIn().css('z-index','1000');    
+            $('.popWrap').fadeIn();    
+            $('.popWrap > .inner > li').eq(0).fadeIn();
+        });
+        $('.btnPop2').click(function(){
+            $('body').on('scroll mousewheel', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                return false;
+            });
+            $('#mCover').fadeIn().css('z-index','1000');    
+            $('.popWrap').fadeIn();    
+            $('.popWrap > .inner > li').eq(1).fadeIn();
+        });
+        $('.btnPopClose').click(function(){
+            $('.popWrap').fadeOut();
+            $('.popWrap > .inner > li').fadeOut();
+            $('.btnGoTop').fadeOut();
+            $('#mCover').fadeOut().css('z-index','997');
+            $('body').off('scroll mousewheel');    
+        });
+
+        $(".popWrap").scroll(function(){
+            if($('.popWrap').scrollTop() > 450){
+                $(".btnGoTop").fadeIn();
+            }else{
+                $(".btnGoTop").fadeOut();
+            }
+        });
+
+        $( '.btnGoTop' ).click( function() {
+            console.log('a click');
+          $( '#popWrap' ).animate( { scrollTop : 0 }, 600 );
+          return false;
+        });
+    </script>
+
+</body>
+</html>
