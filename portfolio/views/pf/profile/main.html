@@ -345,27 +345,9 @@
 	</ul>
 	<!-- //footer end -->
 	
-	<div id="divView" style="position:absolute; display:none; background-color:#ffffff; border:solid 2px #d0d0d0; width:150px; height:50px; padding: 5px 15px 0;"></div>
 	<script>
-	$('.clickMenu').click(function(e) {
-		var divTop = e.pageY - 40; //상단 좌표 위치 안맞을시 e.pageY
-		var divLeft = e.pageX; //좌측 좌표 위치 안맞을시 e.pageX
-		var serial = $(this).attr("serial");
-		var idx = $(this).attr("idx");
-		var userId = $('.clickId').val();
-		console.log(userId);
-		$('#divView').empty().append('<div style="position:absolute;top:5px;right:5px"><span id="close" style="cursor:pointer;font-size:1.5em" title="닫기">x</span> </div><a href="/travelMaker/mem/userHistory.tm?userId='+userId+'">이력보기</a><br/><a href="/travelMaker/msg/messageWrite.tm?receiver='+userId+'">쪽지 보내기</a>');
-		$('#divView').css({
-			"top": divTop,
-			"left": divLeft,
-			"position": "absolute",
-			"z-index" : "996"
-		}).show();
-		$('#close').click(function(){document.getElementById('divView').style.display='none'});
-	});
-	
 	AOS.init({
-	  easing: 'ease-in-out-sine'
+		easing: 'ease-in-out-sine'
 	});
 	</script>
 

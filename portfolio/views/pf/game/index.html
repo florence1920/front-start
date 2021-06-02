@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>team profile</title>
+  	
+  	<!-- FONTS -->
+	<!-- CSS -->	
+	<link href="/portfolio/resources/css/reset.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/common_pf.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/aos.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/contents_pf.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/card.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/rockPS.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/winwheel.css" rel="stylesheet"/>
+	<!-- JS -->
+	<script type="text/javascript" src="/portfolio/resources/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/portfolio/resources/js/Winwheel.js" ></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script type="text/javascript" src="/portfolio/resources/js/aos.js" ></script>	
+
+	
+</head>
+<body>
+	<div id="divView" style="position:absolute; display:none; background-color:#ffffff; border:solid 2px #d0d0d0; width:150px; height:50px; padding: 5px 15px 0;"></div>
+
+		
+		
+		<script>
+			var didScroll;
+			var lastScrollTop = 0;
+			var delta = 5;
+			var navbarHeight = $('#top').outerHeight();
+			
+			$(window).scroll(function(event){
+				didScroll = true;
+			});
+			
+			setInterval(function() {
+				if (didScroll) {
+					hasScrolled();
+					didScroll = false;
+				}
+			}, 250);
+			function hasScrolled() {
+				var st = $(this).scrollTop();
+				if(Math.abs(lastScrollTop - st) <= delta)
+					return;
+				if(st > lastScrollTop && st > navbarHeight){
+					$('#top').removeClass('nav-down').addClass('nav-up');
+				}else {
+					if(st + $(window).height() < $(document).height()) {
+						$('#top').removeClass('nav-up').addClass('nav-down');
+					}
+				}
+				lastScrollTop = st;
+			}
+			
+			$("#ham").click(function(){
+				$(this).toggleClass("active");
+				$('#logo').fadeToggle();
+				$('#sign').fadeToggle();
+				$('#clientMenuWrap_pf').fadeToggle();
+				$('#mCover').fadeToggle();
+			});
+			var nowUrl = window.location.pathname;
+			if(nowUrl == "/portfolio/index.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(0).addClass('on');
+			}else if(nowUrl == "/portfolio/game/home.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');
+			}else if(nowUrl == "/portfolio/game/1to50.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');	
+			}else if(nowUrl == "/portfolio/game/card.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');
+			}else if(nowUrl == "/portfolio/game/lottery.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');	
+			}else if(nowUrl == "/portfolio/game/numUpDown.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');	
+			}else if(nowUrl == "/portfolio/game/purchase.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');
+			}else if(nowUrl == "/portfolio/game/randomPick.pf"){ 	
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');		
+			}else if(nowUrl == "/portfolio/game/rockPS.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(1).addClass('on');
+			}else if(nowUrl == "/portfolio/project/tmEx.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(2).addClass('on');
+			}else if(nowUrl == "/portfolio/profile/team.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(3).addClass('on');
+			}else if(nowUrl == "/portfolio/profile/lsm.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(3).addClass('on');
+			}else if(nowUrl == "/portfolio/profile/jbr.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(3).addClass('on');
+			}else if(nowUrl == "/portfolio/profile/lsh.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(3).addClass('on');
+			}else if(nowUrl == "/portfolio/profile/hys.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(3).addClass('on');
+			}else if(nowUrl == "/portfolio/mem/index.pf"){
+				$('#clientMenuWrap_pf').children('.menu').children('li').eq(4).addClass('on');
+			}
+		</script>
+		
+		<div id="transcroller-body" class="wrapAll">      
+			<div class="gameMode indexMode">
+                <div class="gameTop">
+                    <p>filo</p>
+                </div>
+                <!-- //gameTop end -->
+                <ul class="dashWrap txtWrap">
+                    <li>
+                        <div class="bioWrap">
+                            <img src="/portfolio/resources/images/pf/pf2-1.jpg">
+                            <div class="nameWrap">
+                                <p class="tit">vino_costa</p>
+                                <p class="txt">pride chicken</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li></li>
+                    <li>
+                        <p class="tit">Player</p>
+                        <div class="rankWrap">
+                            <ul class="player">
+                                <li>
+                                    <img src="/portfolio/resources/images/pf/pf1.jpg">
+                                    <div class="playPoint">
+                                        <p class="sub">vino_costa</p>
+                                        <p class="txt">pride chicken</p> 
+                                    </div>        
+                                    <p class="tit">1</p>
+                                </li>
+
+                                <li>
+                                    <img src="/portfolio/resources/images/pf/pf3.jpg">
+                                    <div class="playPoint">
+                                        <p class="sub">vino_costa</p>
+                                        <p class="txt">pride chicken</p> 
+                                    </div>        
+                                    <p class="tit">1</p>
+                                </li>
+
+                                <li>
+                                    <img src="/portfolio/resources/images/pf/pf2-2.jpg">
+                                    <div class="playPoint">
+                                        <p class="sub">vino_costa</p>
+                                        <p class="txt">pride chicken</p> 
+                                    </div>        
+                                    <p class="tit">1</p>
+                                </li>
+
+                                <li>
+                                    <img src="/portfolio/resources/images/pf/pf2-1.jpg">
+                                    <div class="playPoint">
+                                        <p class="sub">vino_costa</p>
+                                        <p class="txt">pride chicken</p> 
+                                    </div>        
+                                    <p class="tit">13</p>
+                                </li>
+
+                                <div class="rCover"></div>
+                            </ul>
+                            <!--player End-->
+                        </div>
+                        <!--rankWrap End-->
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <!-- //dashWrap end -->
+            </div>     
+            <!-- //gameMode end -->
+		</div>
+		<!-- //wrapAll end -->
+		
+		<ul class="footer dark">
+		<li>
+		   <ul class="icon">
+			  <li></li>
+			  <li></li>
+			  <li></li>
+		   </ul>
+		   <div class="info">
+		   	  <p class="sub">Member</p>
+			  <p>이승민 조윤호 정보름 이승헌 허윤서</p>
+			  <p>서울시 관악구 남부순환로 1820,에그엘로우14층</p>
+		   </div>
+		</li>
+		<li class="middle">
+		   <p class="sub">Service Center</p>
+		   <p class="ph">1577-1577</p>
+		</li>
+		<li>
+		   <select class="sel_portfolio">
+			  <!-- <option defaultValue="Family Site">Family Site</option>
+			  <option value="포폴1">GITHUB</option>
+			  <option value="포폴2">Americano</option> -->
+		   </select>
+		</li>
+		<li>
+		   <p>ⓒ 2021 Travel Maker Co., Ltd. All Rights Reserved.</p>
+		</li>
+	    </ul>
+	<!-- //footer end -->
+
+</body>
+</html>

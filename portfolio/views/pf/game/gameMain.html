@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>team profile</title>
+  	
+  	<!-- FONTS -->
+	<!-- CSS -->	
+	<link href="/portfolio/resources/css/reset.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/common_pf.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/aos.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/contents_pf.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/card.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/rockPS.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/winwheel.css" rel="stylesheet"/>
+	<link href="/portfolio/resources/css/swiper.css" rel="stylesheet"/>
+	<!-- JS -->
+	<script type="text/javascript" src="/portfolio/resources/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/portfolio/resources/js/Winwheel.js" ></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script type="text/javascript" src="/portfolio/resources/js/swiper.min.js" ></script>	
+	<script type="text/javascript" src="/portfolio/resources/js/aos.js" ></script>	
+
+
+	
+</head>
+<body class="noscrb">
+
+    <div class="wrapAll game">
+        <div id="top_game">
+
+        </div>
+        <!-- //top_game -->
+
+        <div id="left_game">
+            <div class="swiper-container" id="left_game_swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide todayRec txtWrap">
+                        <p class="tit">Today</p>
+                        <ul class="gameCount">
+                            <li>
+                                <img src="/portfolio/resources/images/pf/roulette.png">
+                                <div class="subWrap">
+                                    <p class="sub">Roulette</p>
+                                </div>    
+                                <div class="goBtn"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide gameBio txtWrap">
+                        <div class="bioWrap">
+                            <img src="/portfolio/resources/images/pf/pf2-1.jpg">
+                            <div class="nameWrap">
+                                <p class="tit">vino_costa</p>
+                                <p class="txt">cameliner</p>
+                            </div>
+                        </div>
+                        <!--bioWrap End-->
+                        <div class="proBar">
+                            <progress max="100" value="70"></progress>
+                            <p class="txt">TOP RATE</p>
+                            <p class="txt percen">72.1%</p>
+                            <!--<progress max="${nextVal.rkNeed}" value="${memInfo.travelCnt}"></progress> -->
+                        </div>
+                        <!--proBar End-->
+                        <div class="pIconWrap">
+                            <p class="sub">1,203</p>
+                            <img src="/portfolio/resources/images/pf/pIco.png" />
+                        </div>
+                        <div class="graBtn sub">Purchase Item</div>
+                    </div>
+                    
+                    <div class="swiper-slide rankWrap txtWrap">
+                            <p class="tit">Player Ranking</p>
+                            <ul class="player">
+                                <li>
+                                    <img src="/portfolio/resources/images/pf/pf1.jpg">
+                                    <div class="playPoint">
+                                        <p class="sub">vino_costa</p>
+                                        <p class="txt">pride chicken</p> 
+                                    </div>        
+                                    <p class="tit">1</p>
+                                </li>
+
+                                <li>
+                                    <img src="/portfolio/resources/images/pf/pf3.jpg">
+                                    <div class="playPoint">
+                                        <p class="sub">vino_costa</p>
+                                        <p class="txt">pride chicken</p> 
+                                    </div>        
+                                    <p class="tit">2</p>
+                                </li>
+
+                                <li>
+                                    <img src="/portfolio/resources/images/pf/pf2-2.jpg">
+                                    <div class="playPoint">
+                                        <p class="sub">vino_costa</p>
+                                        <p class="txt">pride chicken</p> 
+                                    </div>        
+                                    <p class="tit">3</p>
+                                </li>
+
+                                <li>
+                                    <img src="/portfolio/resources/images/pf/pf2-1.jpg">
+                                    <div class="playPoint">
+                                        <p class="sub">vino_costa</p>
+                                        <p class="txt">pride chicken</p> 
+                                    </div>        
+                                    <p class="tit">13</p>
+                                </li>
+
+                                <div class="rCover"></div>
+                            </ul>
+                            <!--player End-->
+                        </div>
+                        <!--rankWrap End-->
+                    <div class="swiper-slide todayRec txtWrap">
+                        <p class="tit">Today</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //left_game end -->
+        
+        <div class="index_game">
+            <div class="inner1">
+                123
+            </div>
+
+            <div class="inner2">
+                <div class="swiper-container" id="right_game_swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">asdfasdfsad</div>
+                        <div class="swiper-slide">asf6d58g4sd564f</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                        <div class="swiper-slide">Slide 10</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //index_game end -->
+
+    </div>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('#left_game_swiper', {
+        direction: 'vertical',
+        mousewheel: true,
+        slidesPerView: 1.85,
+        spaceBetween: 30,
+        });
+
+        var swiper = new Swiper('#right_game_swiper', {
+        mousewheel: true,
+        slidesPerView: 2.5,
+        spaceBetween: 30,
+        });
+    </script>
+</body>
+</html>
