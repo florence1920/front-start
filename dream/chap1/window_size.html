@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window Size</title>
+    <style>
+        .screenBox {background: #00c3ff; width: 400px;}
+    </style>
+</head>
+<body>
+    <section class="screenBox">
+        <div class="windowScreen">
+            <span >window.screen: </span>
+            <span id="screenW"></span>
+            <span>, </span>
+            <span id="screenH"></span>
+        </div>
+        <div class="windowOuter">
+            <span >window.Outer: </span>
+            <span id="outerW"></span>
+            <span>, </span>
+            <span id="outerH"></span>
+        </div>
+        <div class="windowInner">
+            <span >window.inner: </span>
+            <span id="innerW"></span>
+            <span>, </span>
+            <span id="innerH"></span>
+        </div>
+        <div class="clientWidth">
+            <span >documentElement.clientWidth: </span>
+            <span id="clientW"></span>
+            <span>, </span>
+            <span id="clientH"></span>
+        </div>
+    </section>
+    <script>
+        document.body.onresize = function(){
+            //window.screen
+            let screenW = document.getElementById('screenW');
+            screenW.innerHTML = window.screen.width;
+            let screenH = document.getElementById('screenH');
+            screenH.innerHTML = window.screen.height;
+            //window.outer
+            let outerW = document.getElementById('outerW');
+            outerW.innerHTML = window.outerWidth;
+            let outerH = document.getElementById('outerH');
+            outerH.innerHTML = window.outerHeight;
+            //window.inner
+            let innerW = document.getElementById('innerW');
+            innerW.innerHTML = window.innerWidth;
+            let InnerH = document.getElementById('innerH');
+            innerH.innerHTML = window.innerHeight;
+            //client.width
+            let clientW = document.getElementById('clientW');
+            let clientH = document.getElementById('clientH');
+        }
+    </script>
+</body>
+</html>
