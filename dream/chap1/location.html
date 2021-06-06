@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boxWrap {background: #000;}
+        .box {width: 100px; height: 100px; margin:0 0 10px 0; background: rgb(238, 164, 164);}
+        .objBox {background: rgb(255, 5, 5);}
+    </style>
+</head>
+<body>
+    <div class="boxWrap">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box objBox"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <script>
+        //클릭했을 때 좌표 나오게 
+        //뛰어줄 장소
+        let show = document.querySelector('.objBox');
+        
+        function showLoc (event) {
+            let cX = event.clientX;
+            let cY = event.clientY;
+            let pX = event.pageX;
+            let pY = event.pageY;
+            show.innerHTML = `clientX: ${cX}, clientY: ${cY}
+                pageX: ${pX}, pageY: ${pY}`;
+        }
+
+        window.addEventListener('click', showLoc);
+
+        
+    </script>
+</body>
+</html>
